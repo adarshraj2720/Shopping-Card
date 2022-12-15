@@ -15,14 +15,18 @@ function Cart(props) {
     let [changeqty, setchangeqty] = useState(false)
     let [cart, setcart] = useState([])
 
+
+
     function handleclick() {
         setdisplay(true);
         setcart(props.info)
     }
+    
     function handledelete() {
         setdisplay(false)
         setchangeqty(false)
     }
+
     function handleInc(event) {
         let id = event.target.id
         let singleProduct = props.info.filter((p) => p.id == id);
